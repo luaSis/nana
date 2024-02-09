@@ -1,0 +1,23 @@
+import tkinter as tk
+from tkinter import messagebox
+import webbrowser
+import random
+
+# Здесь вы можете добавить ссылки на страшные картинки
+scary_images = [
+    "http://pic.rutubelist.ru/video/3e/c8/3ec8ef96e239e67cf513e633c5b3fc13.jpg",
+    "https://fon.litrelax.ru/uploads/posts/2023-01/1672868314_foni-club-p-oboi-strashnie-fnaf-53.jpg",
+    "http://pm1.narvii.com/7001/b98e50e38039341157066304344398002caa869fr1-1280-720v2_uhq.jpg"
+]
+
+# Создание главного окна программы
+window = tk.Tk()
+window.withdraw()  # Скрываем главное окно
+
+# Открываем случайные окна с страшными картинками
+for _ in range(10):  # Задайте количество окон для открытия
+    messagebox.showinfo("Упс!", "Нажмите ОК!")
+    webbrowser.open(random.choice(scary_images))
+
+# Закрытие главного окна
+window.destroy()
